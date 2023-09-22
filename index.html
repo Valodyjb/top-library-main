@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<title>Libray</title>
+	</head>
+	<body>
+		<div class="full-form-container">
+			<div class="library-container">
+				<div class="library-header">
+					<h1 class="header">
+						<span class="material-icons"> library_books </span> Library
+					</h1>
+
+					<div class="addbook-container">
+						<button type="button" id="addButton"><p>Add Book</p></button>
+					</div>
+					<div class="book-counter">
+						<h2>Book Counter</h2>
+						<span id="bookCounter">
+							<span id="completedBooks">0</span>
+							/
+							<span id="totalBooks">0</span>
+						</span>
+					</div>
+				</div>
+				<div class="library-card-container" id="cardContainer"></div>
+			</div>
+
+			<div class="formContainer" id="formContainerID">
+				<div id="bookForm" class="bookWindow">
+					<form action="/" method="post" id="bookFormInputs">
+						<label for="bookTitle"
+							><p>Book Tile</p>
+							<input type="text" name="bookTitle" id="bookTitle" />
+							<span class="incorrectTitle"></span>
+						</label>
+
+						<label for="bookAuthor"
+							><p>Author</p>
+							<input type="text" name="bookAuthor" id="bookAuthor" />
+							<span class="incorrectAuthor"></span>
+						</label>
+
+						<label for="bookReleaseYear"
+							><p>Release Year</p>
+							<input type="date" name="bookReleaseYear" id="bookReleaseYear" />
+							<span class="incorrectReleaseYear"></span>
+						</label>
+						<label for="bookPages"
+							><p>Pages</p>
+							<input type="text" name="bookPages" id="bookPages" />
+							<span class="incorrectPages"></span>
+						</label>
+
+						<label class="switch">
+							<input
+								class="switch-input"
+								name="isRead"
+								id="isRead"
+								type="checkbox"
+							/>
+							<span
+								class="switch-label"
+								data-on="Read"
+								data-off="Not Read"
+							></span>
+							<span class="switch-handle"></span>
+						</label>
+
+						<button type="button" id="button">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
